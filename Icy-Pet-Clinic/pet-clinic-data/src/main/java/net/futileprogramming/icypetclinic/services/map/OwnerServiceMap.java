@@ -2,11 +2,14 @@ package net.futileprogramming.icypetclinic.services.map;
 
 import java.util.Set;
 
-import net.futileprogramming.icypetclinic.model.Owner;
-import net.futileprogramming.icypetclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
+import net.futileprogramming.icypetclinic.model.Owner;
+import net.futileprogramming.icypetclinic.services.OwnerService;
+
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>
-	implements CrudService<Owner, Long>{
+	implements OwnerService {
 
 	@Override
 	public Set<Owner> findAll() {
@@ -31,5 +34,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long>
 	@Override
 	public void deleteById(Long id) {
 		super.deleteById(id);
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

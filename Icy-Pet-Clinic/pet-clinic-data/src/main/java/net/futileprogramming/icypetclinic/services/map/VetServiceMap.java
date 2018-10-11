@@ -2,10 +2,13 @@ package net.futileprogramming.icypetclinic.services.map;
 
 import java.util.Set;
 
-import net.futileprogramming.icypetclinic.model.Vet;
-import net.futileprogramming.icypetclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+import net.futileprogramming.icypetclinic.model.Vet;
+import net.futileprogramming.icypetclinic.services.VetService;
+
+@Service
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
 	public Vet save(Vet t) {
